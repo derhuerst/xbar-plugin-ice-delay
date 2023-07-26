@@ -1,0 +1,42 @@
+{
+	"name": "xbar-plugin-ice-delay",
+	"description": "An xbar plugin that shows the current delay of the ICE train you're sitting in.",
+	"version": "1.0.0",
+	"preferGlobal": true,
+	"type": "module",
+	"bin": {
+		"xbar-plugin-ice-delay": "./cli.js"
+	},
+	"main": "index.js",
+	"files": [
+		"cli.js",
+		"index.js"
+	],
+	"keywords": [
+		"xbar",
+		"bitbar",
+		"plugin",
+		"macos",
+		"menu bar",
+		"public transport",
+		"transit",
+		"germany"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/xbar-plugin-ice-delay",
+	"repository": "derhuerst/xbar-plugin-ice-delay",
+	"bugs": "https://github.com/derhuerst/xbar-plugin-ice-delay/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=20"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+		"eslint": "^8.45.0"
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"prepublishOnly": "npm run lint"
+	}
+}
