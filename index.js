@@ -26,9 +26,24 @@ const printIceDelayInXbarFormat = async () => {
 	}
 
 	const upcomingSt = stopovers.find(st => st.passed === false)
-	return Number.isInteger(upcomingSt?.arrivalDelay)
+	const upcomingDelay = Number.isInteger(upcomingSt?.arrivalDelay)
 		? renderDelay(upcomingSt.arrivalDelay)
 		: UNKNOWN
+
+	return [
+		upcomingDelay,
+		'---',
+		...(
+			stopovers
+			.filter(st => st.passed === false)
+			.map((st) => {
+				const delay = Number.isInteger(st.arrivalDelay)
+					? renderDelay(st.arrivalDelay)
+					: UNKNOWN
+				return `${st.station?.name} ${delay}`
+			})
+		),
+	].join('\n')
 }
 
 export {
