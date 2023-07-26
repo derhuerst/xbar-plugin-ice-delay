@@ -31,6 +31,8 @@
 		"node": ">=20"
 	},
 	"dependencies": {
+		"pretty-ms": "^8.0.0",
+		"wifi-on-ice-portal-client": "^1.2.0"
 	},
 	"devDependencies": {
 		"eslint": "^8.45.0"

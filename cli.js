@@ -37,4 +37,7 @@ if (flags.version) {
 	process.exit(0)
 }
 
-// todo
+import {printIceDelayInXbarFormat} from './index.js'
+
+const output = await printIceDelayInXbarFormat()
+process.stdout.write(output + '\n')
